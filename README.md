@@ -86,14 +86,7 @@ scripts/ package-extension.sh — builds the release zip locally
 threadsweeper.user.js Legacy userscript (kept for reference)
 
 
-## Build a Release Zip
-
-```bash
-./scripts/package-extension.sh
-
-Outputs releases/threadsweeper-extension-vX.Y.Z.zip locally. Attach it to a GitHub Release — the zip is gitignored and never committed.
-
-Heads Up
+## Heads Up
 Not affiliated with OpenAI
 ChatGPT UI changes can break selectors — always dry-run after major updates
 Only acts on sidebar threads currently loaded/visible
