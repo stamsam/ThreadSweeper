@@ -38,8 +38,7 @@ ThreadSweeper is a Chrome/Edge extension for cleaning ChatGPT sidebar threads wi
 ## Project Structure
 
 - `extension/` Chrome MV3 extension files (`manifest.json`, popup, content script)
-- `scripts/package-extension.sh` builds release zip
-- `releases/` generated release artifacts
+- `scripts/package-extension.sh` builds a local release zip
 - `threadsweeper.user.js` legacy userscript version (optional)
 
 ## Build Release Zip
@@ -51,6 +50,8 @@ ThreadSweeper is a Chrome/Edge extension for cleaning ChatGPT sidebar threads wi
 This creates:
 
 - `releases/threadsweeper-extension-vX.Y.Z.zip`
+
+The generated zip is kept local for GitHub Releases and is not committed to the repository.
 
 ## Important Notes
 
