@@ -3,7 +3,7 @@
 
 ![Image](https://github.com/user-attachments/assets/8004ba43-6e39-4972-a138-00e3a034e4c0)
 
-ChatGPT's built-in "Delete all chats" nukes your Projects too. Clicking one by one is slow, error-prone, and easy to put off. ThreadSweeper lets you bulk-delete regular threads with dry run, filters, and a stop button, without touching your **Projects!**.
+ChatGPT's built-in "Delete all chats" nukes your Projects too. Clicking one by one is slow, error-prone, and easy to put off. ThreadSweeper lets you bulk-delete regular threads with dry run, filters, and a stop button, without touching your **Projects!**
 
 Clean it up once on the web and it syncs across all your devices — phone, tablet, everywhere. No DevTools. No Tampermonkey. Just load the extension and go.
 
@@ -11,7 +11,7 @@ Clean it up once on the web and it syncs across all your devices — phone, tabl
 
 ## Install (No Store Required)
 
-1. Download `threadsweeper-extension-vX.Y.Z.zip` from the [latest GitHub Release](https://github.com/stamsam/ThreadSweeper/releases/latest)
+1. Download `threadsweeper-extension.zip` from the [latest GitHub Release](https://github.com/stamsam/ThreadSweeper/releases/latest)
 2. Unzip it
 3. Open `chrome://extensions` (or `edge://extensions`)
 4. Enable **Developer mode**
