@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         ThreadSweeper
 // @namespace    https://github.com/
-// @version      0.1.0
+// @version      0.1.1
 // @description  Clean ChatGPT sidebar threads with safety guardrails.
 // @author       ThreadSweeper Contributors
 // @match        https://chatgpt.com/*

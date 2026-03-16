@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ThreadSweeper",
   "description": "Clean ChatGPT sidebar threads with safety guardrails.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "permissions": ["storage"],
   "host_permissions": ["https://chatgpt.com/*"],
   "action": {
