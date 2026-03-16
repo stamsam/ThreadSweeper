@@ -1,4 +1,5 @@
 # ThreadSweeper
+Clean your ChatGPT sidebar without nuking your Projects.
 
 ChatGPT's built-in "Delete all chats" nukes your Projects too. And clicking one-by-one is a nightmare if you have ADHD or just let the sidebar pile up. ThreadSweeper lets you bulk-delete regular threads safely — with dry run, filters, and a stop button — without touching your **Projects**!.
 
