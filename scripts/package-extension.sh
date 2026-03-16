@@ -10,7 +10,7 @@ STAGE_DIR="$RELEASE_DIR/threadsweeper-extension"
 
 rm -rf "$STAGE_DIR"
 mkdir -p "$STAGE_DIR"
-cp "$EXT_DIR"/* "$STAGE_DIR"/
+cp -R "$EXT_DIR"/. "$STAGE_DIR"/
 
 rm -f "$OUT_ZIP"
 (
