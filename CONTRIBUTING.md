@@ -8,16 +8,19 @@
 
 ## Local Testing
 
-1. Edit `threadsweeper.user.js`.
-2. Re-paste into Tampermonkey (or use your local userscript sync workflow).
-3. Test dry-run mode on a non-critical account/sidebar state.
-4. Verify section scoping before live deletion.
+1. Edit the extension files in `extension/`.
+2. Open `chrome://extensions` or `edge://extensions`.
+3. Enable `Developer mode`.
+4. Click `Load unpacked` and select the `extension/` folder, or click `Reload` if already installed.
+5. Open `https://chatgpt.com`.
+6. Test dry-run mode on a non-critical account/sidebar state.
+7. Verify section scoping before live deletion.
 
 ## Pull Requests
 
 - Include a clear summary of behavior changes.
 - Include manual test notes:
-  - Browser and Tampermonkey version
+  - Browser and version
   - Dry-run behavior
   - Live-delete behavior
   - Any known limitations
@@ -27,6 +30,6 @@
 Please include:
 
 - Browser + version
-- Userscript manager + version
+- Extension install method (`Load unpacked`, Chrome, Edge, etc.)
 - A screenshot of sidebar layout (redact private info)
-- Console logs from ThreadSweeper panel
+- Logs from the ThreadSweeper popup and browser console

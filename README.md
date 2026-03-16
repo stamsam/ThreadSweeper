@@ -18,7 +18,13 @@ ThreadSweeper is a Chrome/Edge extension for cleaning ChatGPT sidebar threads wi
 
 ## Install From GitHub (No Store)
 
-1. Download the latest release zip: `threadsweeper-extension-vX.Y.Z.zip`.
+Download the latest release from:
+
+- `https://github.com/stamsam/ThreadSweeper/releases/latest`
+
+Then:
+
+1. Download `threadsweeper-extension-vX.Y.Z.zip` from the latest GitHub Release.
 2. Unzip it.
 3. Open `chrome://extensions` (or `edge://extensions`).
 4. Turn on `Developer mode`.
@@ -52,6 +58,8 @@ This creates:
 - `releases/threadsweeper-extension-vX.Y.Z.zip`
 
 The generated zip is kept local for GitHub Releases and is not committed to the repository.
+
+To publish a new version, create a GitHub Release and attach the generated zip there.
 
 ## Important Notes
 
