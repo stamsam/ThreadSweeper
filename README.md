@@ -1,77 +1,135 @@
 # ThreadSweeper
 
-ThreadSweeper is a Chrome/Edge extension for cleaning ChatGPT sidebar threads with safety guardrails.
+ChatGPT's built-in "Delete all chats" nukes your Projects too. And clicking one-by-one is a nightmare if you have ADHD or just let the sidebar pile up. ThreadSweeper lets you bulk-delete regular threads safely — with dry run, filters, and a stop button — without touching your **Projects**!.
 
-## What This Solves
+No DevTools. No Tampermonkey. Just load the extension and go.
 
-- No DevTools paste every time
-- No Tampermonkey required
-- Shareable install via GitHub zip
+## Install (No Store Required)
 
-## Core Safety Defaults
+1. Download `threadsweeper-extension-vX.Y.Z.zip` from the [latest GitHub Release](https://github.com/stamsam/ThreadSweeper/releases/latest)
+2. Unzip it
+3. Open `chrome://extensions` (or `edge://extensions`)
+4. Enable **Developer mode**
+5. Click **Load unpacked** → select the unzipped `threadsweeper-extension` folder
+6. Go to `https://chatgpt.com` and click the ThreadSweeper icon
 
-- `Dry run` enabled by default
-- `Restrict to Your chats` enabled by default
-- `Max deletes` limit
-- `Stop` button
-- Optional final browser confirmation prompt
+## Safety Defaults
 
-## Install From GitHub (No Store)
+Every run starts with guardrails on:
 
-Download the latest release from:
-
-- `https://github.com/stamsam/ThreadSweeper/releases/latest`
-
-Then:
-
-1. Download `threadsweeper-extension-vX.Y.Z.zip` from the latest GitHub Release.
-2. Unzip it.
-3. Open `chrome://extensions` (or `edge://extensions`).
-4. Turn on `Developer mode`.
-5. Click `Load unpacked`.
-6. Select the unzipped `threadsweeper-extension` folder.
-7. Open `https://chatgpt.com`.
-8. Click the ThreadSweeper extension icon.
+| Setting | Default | Why |
+|---|---|---|
+| Dry run | ✅ On | Preview what would be deleted before anything happens |
+| Restrict to Your chats | ✅ On | Skips shared/Project threads |
+| Max deletes | Limited | Caps the run so nothing spirals |
+| Stop button | Always visible | Kill it mid-run instantly |
+| Browser confirmation | Optional | Extra prompt before live deletes |
 
 ## Usage
 
-1. Keep `Dry run` checked for your first run.
-2. Click `Start` and confirm preview logs look correct.
-3. Uncheck `Dry run` only when ready.
-4. Keep `Restrict to Your chats` on unless intentional.
-5. Click `Stop` anytime.
+1. First run: keep **Dry run** on, click **Start**, read the preview logs
+2. When it looks right, uncheck **Dry run** and run for real
+3. Hit **Stop** anytime — it halts immediately
+4. Only turn off **Restrict to Your chats** if you know what you're doing
 
 ## Project Structure
 
-- `extension/` Chrome MV3 extension files (`manifest.json`, popup, content script)
-- `scripts/package-extension.sh` builds a local release zip
-- `threadsweeper.user.js` legacy userscript version (optional)
+```
+extension/          Chrome MV3 extension (manifest, popup, content script)
+scripts/            package-extension.sh — builds the release zip locally
+threadsweeper.user.js  Legacy userscript (kept for reference)
+```
 
-## Build Release Zip
+## Build a Release Zip
 
 ```bash
 ./scripts/package-extension.sh
 ```
 
-This creates:
+Outputs `releases/threadsweeper-extension-vX.Y.Z.zip` locally. Attach it to a GitHub Release — the zip is gitignored and never committed.
 
-- `releases/threadsweeper-extension-vX.Y.Z.zip`
+## Heads Up
 
-The generated zip is kept local for GitHub Releases and is not committed to the repository.
-
-To publish a new version, create a GitHub Release and attach the generated zip there.
-
-## Important Notes
-
-- This project is not affiliated with OpenAI.
-- ChatGPT UI changes can break selectors.
-- Always run dry mode first after major ChatGPT UI updates.
-- Script only acts on currently loaded/visible sidebar items.
+- Not affiliated with OpenAI
+- ChatGPT UI changes can break selectors — always dry-run after major updates
+- Only acts on sidebar threads currently loaded/visible
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## License
 
-MIT. See [`LICENSE`](./LICENSE).
+MIT — see [LICENSE](./LICENSE)
+
+---
+
+Key changes: led with the actual problem (Projects getting nuked, one-by-one clicking), made the safety table scannable, cut the redundant "What This Solves" section, tightened everything else. Drop this in when ready.Here's a tighter, more human rewrite that leads with the real problem:
+
+---
+
+# ThreadSweeper
+
+ChatGPT's built-in "Delete all chats" nukes your Projects too. And clicking one-by-one is a nightmare if you have ADHD or just let the sidebar pile up. ThreadSweeper lets you bulk-delete regular threads safely — with dry run, filters, and a stop button — without touching your Projects.
+
+No DevTools. No Tampermonkey. Just load the extension and go.
+
+## Install (No Store Required)
+
+1. Download `threadsweeper-extension-vX.Y.Z.zip` from the [latest GitHub Release](https://github.com/stamsam/ThreadSweeper/releases/latest)
+2. Unzip it
+3. Open `chrome://extensions` (or `edge://extensions`)
+4. Enable **Developer mode**
+5. Click **Load unpacked** → select the unzipped `threadsweeper-extension` folder
+6. Go to `https://chatgpt.com` and click the ThreadSweeper icon
+
+## Safety Defaults
+
+Every run starts with guardrails on:
+
+| Setting | Default | Why |
+|---|---|---|
+| Dry run | ✅ On | Preview what would be deleted before anything happens |
+| Restrict to Your chats | ✅ On | Skips shared/Project threads |
+| Max deletes | Limited | Caps the run so nothing spirals |
+| Stop button | Always visible | Kill it mid-run instantly |
+| Browser confirmation | Optional | Extra prompt before live deletes |
+
+## Usage
+
+1. First run: keep **Dry run** on, click **Start**, read the preview logs
+2. When it looks right, uncheck **Dry run** and run for real
+3. Hit **Stop** anytime — it halts immediately
+4. Only turn off **Restrict to Your chats** if you know what you're doing
+
+## Project Structure
+
+```
+extension/          Chrome MV3 extension (manifest, popup, content script)
+scripts/            package-extension.sh — builds the release zip locally
+threadsweeper.user.js  Legacy userscript (kept for reference)
+```
+
+## Build a Release Zip
+
+```bash
+./scripts/package-extension.sh
+```
+
+Outputs `releases/threadsweeper-extension-vX.Y.Z.zip` locally. Attach it to a GitHub Release — the zip is gitignored and never committed.
+
+## Heads Up
+
+- Not affiliated with OpenAI
+- ChatGPT UI changes can break selectors — always dry-run after major updates
+- Only acts on sidebar threads currently loaded/visible
+
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+## License
+
+MIT — see [LICENSE](./LICENSE)
+
+---
