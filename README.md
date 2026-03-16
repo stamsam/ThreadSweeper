@@ -6,6 +6,7 @@
 ChatGPT's built-in "Delete all chats" nukes your Projects too. Clicking one by one is slow, error-prone, and easy to put off. ThreadSweeper lets you bulk-delete regular threads with dry run, filters, and a stop button, without touching your **Projects**.
 
 No DevTools. No Tampermonkey. Just load the extension and go.
+
 [![Follow on X](https://img.shields.io/twitter/follow/stamatiou?style=social)](https://x.com/stamatiou)
 
 ## Install (No Store Required)
