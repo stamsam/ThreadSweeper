@@ -13,6 +13,17 @@
       <h1>ThreadSweeper</h1>
     </header>
 
+    <label class="field" for="providerMode">
+      <span>Provider</span>
+      <select id="providerMode">
+        <option value="auto">Auto</option>
+        <option value="chatgpt">ChatGPT</option>
+        <option value="claude">Claude</option>
+      </select>
+    </label>
+
+    <p id="providerStatus">Detected site: Unknown</p>
+
     <label class="row">
       <input id="dryRun" type="checkbox" checked>
       <span>Dry run (preview only)</span>
@@ -20,7 +31,7 @@
 
     <label class="row">
       <input id="onlyYourChats" type="checkbox" checked>
-      <span>Restrict to Your chats</span>
+      <span id="scopeLabel">Restrict to Your chats</span>
     </label>
 
     <label class="row">

@@ -10,28 +10,33 @@
 2. Open `chrome://extensions` or `edge://extensions`.
 3. Enable **Developer mode**.
 4. Click **Load unpacked** and select the `extension/` folder, or click **Reload** if already installed.
-5. Open `https://chatgpt.com`.
+5. Open `https://chatgpt.com` or `https://claude.ai/recents`.
 6. Test dry-run mode on a non-critical account/sidebar state.
-7. Verify section scoping before live deletion.
+7. Verify provider detection, section scoping, and Project protection before live deletion.
 
 ## Build a Release Zip
 
 ```bash
 ./scripts/package-extension.sh
+```
 
-Outputs releases/threadsweeper-extension-vX.Y.Z.zip locally. Attach it to a GitHub Release — the zip is gitignored and never committed.
+Outputs `releases/threadsweeper-extension-vX.Y.Z.zip` locally. Attach it to a GitHub Release; the zip is gitignored and never committed.
 
-Pull Requests
-Include a clear summary of behavior changes.
-Include manual test notes:
-Browser and version
-Dry-run behavior
-Live-delete behavior
-Any known limitations
-Issue Reports
+## Pull Requests
+
+- Include a clear summary of behavior changes.
+- Include manual test notes for browser and version.
+- Include manual test notes for provider tested (`ChatGPT` or `Claude`).
+- Include manual test notes for dry-run behavior.
+- Include manual test notes for live-delete behavior.
+- Include manual test notes for known limitations.
+
+## Issue Reports
+
 Please include:
 
-Browser + version
-Extension install method (Load unpacked, Chrome, Edge, etc.)
-A screenshot of sidebar layout (redact private info)
-Logs from the ThreadSweeper popup and browser console
+- Browser + version
+- Extension install method (`Load unpacked`, Chrome, Edge, etc.)
+- Provider affected (`ChatGPT` or `Claude`)
+- A screenshot of the relevant sidebar/history layout (redact private info)
+- Logs from the ThreadSweeper popup and browser console

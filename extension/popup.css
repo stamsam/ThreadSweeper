@@ -45,12 +45,19 @@ h1 {
   gap: 4px;
 }
 
-.field input {
+.field input,
+.field select {
   border: 1px solid #d1d5db;
   border-radius: 6px;
   padding: 6px 8px;
   font: inherit;
   background: #ffffff;
+}
+
+#providerStatus {
+  margin: -2px 0 0;
+  font-size: 11px;
+  color: #475569;
 }
 
 .actions {
